@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\GamerSource.Data\\GamerSource.Data.csproj": {}
+  },
+  "projects": {
+    "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\GamerSource.Data\\GamerSource.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\GamerSource.Data\\GamerSource.Data.csproj",
+        "projectName": "GamerSource.Data",
+        "projectPath": "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\GamerSource.Data\\GamerSource.Data.csproj",
+        "packagesPath": "C:\\Users\\Tim Gonzalez\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\GamerSource.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tim Gonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.6.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.deps.json
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.dll
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csprojAssemblyReference.cache
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csproj.CoreCompileInputs.cache
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfoInputs.cache
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfo.cs
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.pdb
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
+C:\My Code\GamerSource\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.deps.json
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csproj.CoreCompileInputs.cache
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfoInputs.cache
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfo.cs
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.deps.json
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csproj.CoreCompileInputs.cache
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfoInputs.cache
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfo.cs
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TimGonzo\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csprojAssemblyReference.cache
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.deps.json
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.dll
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.pdb
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csproj.CoreCompileInputs.cache
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfoInputs.cache
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfo.cs
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
+C:\My Code\GamerSourceTV\midtier\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TestSolutions\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.deps.json
+E:\Code\Repos\TestSolutions\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TestSolutions\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TestSolutions\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csprojAssemblyReference.cache
+E:\Code\Repos\TestSolutions\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csproj.CoreCompileInputs.cache
+E:\Code\Repos\TestSolutions\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfoInputs.cache
+E:\Code\Repos\TestSolutions\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfo.cs
+E:\Code\Repos\TestSolutions\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TestSolutions\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.deps.json
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\bin\Debug\netcoreapp2.2\GamerSource.Models.pdb
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csprojAssemblyReference.cache
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csproj.CoreCompileInputs.cache
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfoInputs.cache
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfo.cs
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
