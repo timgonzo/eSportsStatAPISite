@@ -21,6 +21,12 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GamerSource.Data\GamerSource.Data.csproj" />
+    <ProjectReference Include="..\GamerSource.Models\GamerSource.Models.csproj" />
+    <ProjectReference Include="..\GamerSource.Web.Models\GamerSource.Web.Models.csproj" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

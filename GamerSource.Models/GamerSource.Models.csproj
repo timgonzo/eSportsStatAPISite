@@ -1,50 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Domain\PandaScore\Players\**" />
-    <Compile Remove="Domain\PandaScore\Teams\**" />
-    <Compile Remove="Domain\Players\**" />
-    <Compile Remove="Domain\Structures\**" />
-    <Compile Remove="Domain\Teams\**" />
-    <Compile Remove="Domain\UserProfiles\**" />
-    <Compile Remove="Requests\Players\**" />
-    <Compile Remove="Requests\Structures\**" />
-    <Compile Remove="Requests\Teams\**" />
-    <Compile Remove="Requests\UserProfiles\**" />
-    <EmbeddedResource Remove="Domain\PandaScore\Players\**" />
-    <EmbeddedResource Remove="Domain\PandaScore\Teams\**" />
-    <EmbeddedResource Remove="Domain\Players\**" />
-    <EmbeddedResource Remove="Domain\Structures\**" />
-    <EmbeddedResource Remove="Domain\Teams\**" />
-    <EmbeddedResource Remove="Domain\UserProfiles\**" />
-    <EmbeddedResource Remove="Requests\Players\**" />
-    <EmbeddedResource Remove="Requests\Structures\**" />
-    <EmbeddedResource Remove="Requests\Teams\**" />
-    <EmbeddedResource Remove="Requests\UserProfiles\**" />
-    <None Remove="Domain\PandaScore\Players\**" />
-    <None Remove="Domain\PandaScore\Teams\**" />
-    <None Remove="Domain\Players\**" />
-    <None Remove="Domain\Structures\**" />
-    <None Remove="Domain\Teams\**" />
-    <None Remove="Domain\UserProfiles\**" />
-    <None Remove="Requests\Players\**" />
-    <None Remove="Requests\Structures\**" />
-    <None Remove="Requests\Teams\**" />
-    <None Remove="Requests\UserProfiles\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Sendgrid" Version="9.11.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Domain\GamerSource\Users\UserProfiles\" />
   </ItemGroup>
 
 </Project>

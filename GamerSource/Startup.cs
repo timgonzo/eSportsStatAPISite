@@ -1,3 +1,6 @@
+using System;
+using GamerSource.Data;
+using GamerSource.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -20,6 +23,19 @@ namespace GamerSource
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connString = Configuration.GetConnectionString("Default");
+
+            services.AddSingleton<IConfiguration>(Configuration);
+
+            services.AddSingleton<GamerSource.Data.Providers.IDataProvider, SqlDataProvider>(delegate (IServiceProvider provider)
+            {
+                return new SqlDataProvider(connString);
+            });
+
+            services.AddSingleton<IUserServices, UserServices>();
+
+            //services.AddSingleton<Iwhatever, whatever> - Dependency Injection
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the React files will be served from this directory

@@ -22,11 +22,11 @@ posts : {
 */
 
 const state = {
-  user: {
-    roles: [],
-    userName: "",
-    email: ""
-  },
+  // user: {
+  //   roles: [],
+  //   userName: "",
+  //   email: ""
+  // },
   navigation: [],
   availableRoutes: [
     {
@@ -42,15 +42,15 @@ const state = {
   notifications: {
     all: [],
     byId: {}
-  },
-  cart: {
-    count: 8,
-    items: {
-      all: [],
-      byId: {}
-    }
-  },
-  people: []
+  }
+  // cart: {
+  //   count: 8,
+  //   items: {
+  //     all: [],
+  //     byId: {}
+  //   }
+  // },
+  // people: []
 };
 
 export default state;

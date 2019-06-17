@@ -18,16 +18,7 @@ namespace GamerSource.Models.Requests
 
         [Required]
         [MaxLength(128)]
-        public string Password { get; set; }
+        public string PasswordHash { get; set; }
 
-        [Required]
-        public bool IsConfirmed { get; set; }
-
-        [Required]
-        [Range(1, 10, ErrorMessage = "Status must be an integer value between 1 and 10")]
-        public int Status { get; set; }
-
-        [MaxLength(255)]
-        public string AvatarUrl { get; set; }
     }
 }
