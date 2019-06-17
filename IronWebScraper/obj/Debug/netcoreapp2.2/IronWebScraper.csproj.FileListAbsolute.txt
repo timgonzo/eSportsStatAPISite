@@ -1,0 +1,11 @@
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.deps.json
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.runtimeconfig.json
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.runtimeconfig.dev.json
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.dll
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.pdb
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.csprojAssemblyReference.cache
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.csproj.CoreCompileInputs.cache
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.AssemblyInfoInputs.cache
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.AssemblyInfo.cs
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.dll
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.pdb
