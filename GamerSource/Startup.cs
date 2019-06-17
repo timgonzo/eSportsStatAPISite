@@ -43,6 +43,15 @@ namespace GamerSource
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            //Statement below allows CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableCORS", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials().Build();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +71,8 @@ namespace GamerSource
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            //To use CORS enablement
+            app.UseCors("EnableCORS");
 
             app.UseMvc(routes =>
             {

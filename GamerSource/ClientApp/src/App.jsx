@@ -20,6 +20,7 @@ import { Route, withRouter } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import Structures from "./components/Structures";
 import ColorNavbar from "./components/Navbars/ColorNavbar.jsx";
+import RegisterPage from "./components/RegisterPage";
 const _logger = logger.extend("App");
 class App extends Component {
   state = { isLocalSetUp: false, storeValue: "", nsKeys: [] };
@@ -50,6 +51,7 @@ class App extends Component {
         <ColorNavbar />
         <Route exact path="/" component={LandingPage} />
         <Route path="/structures" component={Structures} />
+        <Route path="/register" component={RegisterPage} />
       </div>
     );
   }

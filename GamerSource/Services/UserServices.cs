@@ -82,6 +82,7 @@ namespace GamerSource.Services
                                 roles = new List<RoleType>();
                                 user.Roles = roles;
                             }
+                            //Roles array logic needs to be checked
                             int roleIndex = 0;
                             RoleType roleType = reader.GetSafeEnum<RoleType>(roleIndex++);
                             roles.Add(roleType);

@@ -56,7 +56,7 @@ class ColorNavbar extends React.Component {
           <Container>
             <div className="navbar-translate">
               <NavbarBrand to="/" tag={Link} onClick={this.scrollTop}>
-                <span>GamerSource.TV</span>
+                <span>GamerSource</span>
               </NavbarBrand>
               <button className="navbar-toggler" id="navigation">
                 <span className="navbar-toggler-bar bar1" />
@@ -139,9 +139,8 @@ class ColorNavbar extends React.Component {
                   <Button
                     className="nav-link"
                     color="default"
-                    href="/index"
+                    href="/register"
                     size="sm"
-                    //target="_blank"
                   >
                     <p>Sign Up</p>
                   </Button>
