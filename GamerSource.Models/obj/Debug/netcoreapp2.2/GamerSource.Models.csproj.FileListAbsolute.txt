@@ -49,4 +49,3 @@ E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreap
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.AssemblyInfo.cs
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
-E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csprojAssemblyReference.cache
