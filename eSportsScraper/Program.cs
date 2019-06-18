@@ -1,71 +1,85 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Web;
+using System.Net;
 using HtmlAgilityPack;
 
 namespace eSportsScraper
 {
-    class Program
+    class qq
     {
         static void Main(string[] args)
         {
-            GetHtmlAsync();
+            List<ResultsModel> resultsList = null;
 
-
-            Console.ReadLine();
-        }
-
-        private static async void GetHtmlAsync()
-        {
-
-            var url = "https://www.hltv.org/results?stars=5";
-
-            var httpClient = new HttpClient();
-            var html = await httpClient.GetStringAsync(url);
-
+            var webClient = new WebClient();
+            var html = webClient.DownloadString("https://www.hltv.org/results?stars=5");
             var htmlDocument = new HtmlDocument();
-
             htmlDocument.LoadHtml(html);
 
-            var ResultsList = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'results-all']");
+            var sublists = htmlDocument
+                .DocumentNode
+                .Descendants()
+                .Where(sublist => sublist.Attributes["class"] != null && sublist.Attributes["class"].Value.Contains("results-sublist"));
 
-            //var ResultsSublist = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'results-sublist']");
-
-            //var ResultsHeadLine = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'standard-headline']");
-
-            foreach(var subList in ResultsList)
+            foreach(var sublist in sublists)
             {
-                var day = HttpUtility.HtmlDecode(subList.SelectSingleNode(".//div[@class='results-sublist']").InnerText);
+                //This might be where I put the event Day/headline
+                var matches = sublist.ChildNodes.Where(match => match.Attributes["class"] != null && match.Attributes["class"].Value.Contains("result-con"));
+                
+                foreach(var match in matches)
+                {
+                    var matchResult = new ResultsModel();
 
-                Console.WriteLine();
+                    var team1Node = match.Descendants().Where(node => node.Attributes["class"].Value.Contains("team") && node.ParentNode.Attributes["class"].Value.Contains("line-align team1"));
+
+                    var team1 = team1Node.InnerText;
+
+                }
+
+
             }
 
-            //foreach(var result in ResultsSublist)
-            //{
-            //    var resultDay = HttpUtility.HtmlDecode(resultsSublist.SelectSingleNode(".//div[@class= '']"))
-            //}
 
-            var ScoreWon = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'score-won']");
+//namespace eSportsScraper
+//{
+//    class Scraper
+//    {
+//        static void Main(string[] args)
+//        {
+//            List<ResultsModel> resultsList = null;
 
-            var ScoreLost = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'score-lost']");
+//            var webClient = new WebClient();qq
+//            var html = webClient.DownloadString("https://www.hltv.org/results?stars=5");
+//            var htmlDocument = new HtmlDocument();
+//            htmlDocument.LoadHtml(html);
 
-            var Team1 = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'team team-won']");
+//            var headlines = htmlDocument
+//                .DocumentNode
+//                .Descendants()
+//                .Where(headline => headline.Attributes["class"] != null &&
+//                headline.Attributes["class"].Value.Contains("results-sublist"));
 
-            //var Team1Img = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'standard-headline']");
+//            if (resultsList == null)
+//            {
+//                resultsList = new List<ResultsModel>();
 
-            var Team2 = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'team ']");
+//                foreach (var headline in headlines)
+//                {
+//                    var resultsModel = new ResultsModel();
 
-            //var Team2Img = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'standard-headline']");
-
-            var EventName = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'event']");
-
-            var EventImg = htmlDocument.DocumentNode.SelectNodes("//*[@class = 'event-logo smartphone-only']");
+//                    resultsModel.ResultsHeadline = headline.InnerText;
 
 
-            Console.WriteLine();
 
-        }
-    }
-}
-//results-all
+
+
+//                    resultsList.Add(resultsModel);
+//                }
+
+//            }
+
+
+//            Console.ReadLine();
+//        }
+//    }
+//}

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace eSportsScraper
 {
-    public class EntryModel
+    public class ResultsModel
     {
-        public string ResultsHeadline { get; set; }
+        //public string ResultsHeadline { get; set; }
 
         public string ScoreWon { get; set; }
         public string ScoreLost { get; set; }
