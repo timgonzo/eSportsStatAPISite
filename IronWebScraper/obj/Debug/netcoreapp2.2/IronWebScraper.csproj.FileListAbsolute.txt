@@ -9,3 +9,13 @@ E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.AssemblyInfo.cs
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.dll
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.pdb
+C:\My Code\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.deps.json
+C:\My Code\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.runtimeconfig.json
+C:\My Code\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.runtimeconfig.dev.json
+C:\My Code\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.dll
+C:\My Code\SabioSinglePageApp\IronWebScraper\bin\Debug\netcoreapp2.2\IronWebScraper.pdb
+C:\My Code\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.csproj.CoreCompileInputs.cache
+C:\My Code\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.AssemblyInfoInputs.cache
+C:\My Code\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.AssemblyInfo.cs
+C:\My Code\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.dll
+C:\My Code\SabioSinglePageApp\IronWebScraper\obj\Debug\netcoreapp2.2\IronWebScraper.pdb

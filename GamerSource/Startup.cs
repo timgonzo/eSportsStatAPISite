@@ -34,6 +34,8 @@ namespace GamerSource
 
             services.AddSingleton<IUserServices, UserServices>();
 
+            services.AddSingleton<IUserProfileServices, UserProfileServices>();
+
             //services.AddSingleton<Iwhatever, whatever> - Dependency Injection
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -42,6 +44,15 @@ namespace GamerSource
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/build";
+            });
+
+            //Statement below allows CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableCORS", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials().Build();
+                });
             });
         }
 
@@ -62,6 +73,8 @@ namespace GamerSource
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            //To use CORS enablement
+            app.UseCors("EnableCORS");
 
             app.UseMvc(routes =>
             {

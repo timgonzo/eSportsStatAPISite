@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamerSource", "GamerSource.csproj", "{F1677349-8E42-41AD-95F0-7357D2F3A2C2}"
 EndProject
@@ -11,9 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamerSource.Models", "..\Ga
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamerSource.Web.Models", "..\GamerSource.Web.Models\GamerSource.Web.Models.csproj", "{D03D9D86-2269-4DF3-AB36-98E4984F45C0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eSportsScraper", "..\eSportsScraper\eSportsScraper.csproj", "{83E8BC77-2CDE-4AF8-92BC-61D493FBF0A6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronWebScraper", "..\IronWebScraper\IronWebScraper.csproj", "{7AA03189-D5FA-497F-BE50-3F2E8736E0D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronWebScraper", "..\IronWebScraper\IronWebScraper.csproj", "{7AA03189-D5FA-497F-BE50-3F2E8736E0D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		{D03D9D86-2269-4DF3-AB36-98E4984F45C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D03D9D86-2269-4DF3-AB36-98E4984F45C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D03D9D86-2269-4DF3-AB36-98E4984F45C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83E8BC77-2CDE-4AF8-92BC-61D493FBF0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83E8BC77-2CDE-4AF8-92BC-61D493FBF0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83E8BC77-2CDE-4AF8-92BC-61D493FBF0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83E8BC77-2CDE-4AF8-92BC-61D493FBF0A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7AA03189-D5FA-497F-BE50-3F2E8736E0D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7AA03189-D5FA-497F-BE50-3F2E8736E0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA03189-D5FA-497F-BE50-3F2E8736E0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU

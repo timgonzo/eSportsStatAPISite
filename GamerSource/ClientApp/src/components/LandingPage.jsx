@@ -33,7 +33,7 @@ class LandingPage extends React.Component {
           <div className="squares square7" />
           <Container>
             <div className="content-center brand">
-              <h1 className="h1-seo">GamerSource.TV</h1>
+              <h1 className="h1-seo">GamerSource</h1>
               <h3 className="text-muted" onClick={this.scrollToGames}>
                 Scroll Down For More
                 <br />
@@ -53,7 +53,7 @@ class LandingPage extends React.Component {
               />
               <CardBody className="justify-content-xs-center text-center d-flex">
                 <Button
-                  color="primary"
+                  color="info"
                   className="animation-on-hover flex-fill"
                   to="/structures"
                   tag={Link}
@@ -72,7 +72,7 @@ class LandingPage extends React.Component {
               />
               <CardBody className="justify-content-xs-center text-center d-flex">
                 <Button
-                  color="primary"
+                  color="info"
                   className="animation-on-hover flex-fill"
                   to="/structures"
                   tag={Link}
@@ -89,7 +89,7 @@ class LandingPage extends React.Component {
               />
               <CardBody className="justify-content-xs-center text-center d-flex">
                 <Button
-                  color="primary"
+                  color="info"
                   className="animation-on-hover flex-fill"
                   to="/structures"
                   tag={Link}
@@ -106,7 +106,7 @@ class LandingPage extends React.Component {
               />
               <CardBody className="justify-content-xs-center text-center d-flex">
                 <Button
-                  color="primary"
+                  color="info"
                   className="animation-on-hover flex-fill"
                   to="/structures"
                   tag={Link}
