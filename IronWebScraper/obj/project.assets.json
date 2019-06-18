@@ -686,23 +686,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tim Gonzalez\\.nuget\\packages\\": {},
+    "C:\\Users\\tvgon\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\IronWebScraper\\IronWebScraper.csproj",
+      "projectUniqueName": "C:\\My Code\\SabioSinglePageApp\\IronWebScraper\\IronWebScraper.csproj",
       "projectName": "IronWebScraper",
-      "projectPath": "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\IronWebScraper\\IronWebScraper.csproj",
-      "packagesPath": "C:\\Users\\Tim Gonzalez\\.nuget\\packages\\",
-      "outputPath": "E:\\Code\\Repos\\TimGonzo\\SabioSinglePageApp\\IronWebScraper\\obj\\",
+      "projectPath": "C:\\My Code\\SabioSinglePageApp\\IronWebScraper\\IronWebScraper.csproj",
+      "packagesPath": "C:\\Users\\tvgon\\.nuget\\packages\\",
+      "outputPath": "C:\\My Code\\SabioSinglePageApp\\IronWebScraper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tim Gonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tvgon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

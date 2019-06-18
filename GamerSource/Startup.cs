@@ -34,6 +34,8 @@ namespace GamerSource
 
             services.AddSingleton<IUserServices, UserServices>();
 
+            services.AddSingleton<IUserProfileServices, UserProfileServices>();
+
             //services.AddSingleton<Iwhatever, whatever> - Dependency Injection
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

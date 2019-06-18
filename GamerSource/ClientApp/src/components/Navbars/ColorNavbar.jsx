@@ -117,12 +117,13 @@ class ColorNavbar extends React.Component {
                     <i className="fa fa-cogs d-lg-none d-xl-none" />
                     My Account
                   </DropdownToggle>
+
                   <DropdownMenu className="dropdown-with-icons">
                     <DropdownItem to="/sections#teams" tag={Link}>
                       <i className="tim-icons icon-single-02" />
                       My Profile
                     </DropdownItem>
-                    <DropdownItem to="/sections#teams" tag={Link}>
+                    <DropdownItem to="/account/settings" tag={Link}>
                       <i className="tim-icons icon-settings-gear-63" />
                       Account Settings
                     </DropdownItem>

@@ -70,9 +70,9 @@ E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netco
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\bin\Debug\netcoreapp2.2\GamerSource.Web.Models.deps.json
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\bin\Debug\netcoreapp2.2\GamerSource.Web.Models.dll
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\bin\Debug\netcoreapp2.2\GamerSource.Web.Models.pdb
-C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netcoreapp2.2\GamerSource.Web.Models.csprojAssemblyReference.cache
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netcoreapp2.2\GamerSource.Web.Models.csproj.CoreCompileInputs.cache
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netcoreapp2.2\GamerSource.Web.Models.AssemblyInfoInputs.cache
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netcoreapp2.2\GamerSource.Web.Models.AssemblyInfo.cs
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netcoreapp2.2\GamerSource.Web.Models.dll
 C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netcoreapp2.2\GamerSource.Web.Models.pdb
+C:\My Code\SabioSinglePageApp\GamerSource.Web.Models\obj\Debug\netcoreapp2.2\GamerSource.Web.Models.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
 import React from "react";
+import * as userServices from "../services/usersServices";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 // reactstrap components
@@ -25,16 +26,15 @@ import {
 // core components
 import ColorNavbar from "./Navbars/ColorNavbar.jsx";
 import Footer from "./Footers/Footer.jsx";
+import logger from "../logger";
+const _logger = logger.extend("timgonzo");
 
 class RegisterPage extends React.Component {
   wrapperSelectRef = React.createRef();
 
   state = {
     squares1to6: "",
-    squares7and8: "",
-    firstName: "",
-    lastName: "",
-    email: ""
+    squares7and8: ""
   };
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -42,7 +42,9 @@ class RegisterPage extends React.Component {
     //this.refs.wrapper.scrollTop = 0;
     window.scrollTo(0, 0);
     document.body.classList.add("register-page");
-    document.documentElement.addEventListener("mousemove", this.followCursor);
+    document.documentElement.addEventListener("mousemove", this.followCursor, {
+      passive: true
+    });
   }
   componentWillUnmount() {
     document.body.classList.remove("register-page");
@@ -74,6 +76,39 @@ class RegisterPage extends React.Component {
         "deg)"
     });
   };
+
+  handleInputChange = e => {
+    const target = e.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  onSuccess = () => {
+    _logger("Post success");
+    window.history.back();
+  };
+
+  onError = () => {
+    _logger("Post error");
+  };
+
+  handleSubmit = () => {
+    const payload = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      passwordHash: this.state.password,
+      passwordConfirm: this.state.password
+    };
+    userServices
+      .add(payload)
+      .then(this.onSuccess)
+      .catch(this.onError);
+  };
+
   render() {
     return (
       <>
@@ -116,6 +151,7 @@ class RegisterPage extends React.Component {
                               onBlur={() =>
                                 this.setState({ firstNamefocus: false })
                               }
+                              onChange={this.handleInputChange}
                             />
                           </FormGroup>
                           <FormGroup className="col-md-6">
@@ -129,6 +165,7 @@ class RegisterPage extends React.Component {
                               onBlur={() =>
                                 this.setState({ LastNamefocus: false })
                               }
+                              onChange={this.handleInputChange}
                             />
                           </FormGroup>
                         </div>
@@ -145,8 +182,10 @@ class RegisterPage extends React.Component {
                           <Input
                             placeholder="Email"
                             type="text"
+                            name="email"
                             onFocus={() => this.setState({ emailFocus: true })}
                             onBlur={() => this.setState({ emailFocus: false })}
+                            onChange={this.handleInputChange}
                           />
                         </InputGroup>
                         <InputGroup
@@ -161,33 +200,24 @@ class RegisterPage extends React.Component {
                           </InputGroupAddon>
                           <Input
                             placeholder="Password"
-                            type="text"
+                            type="password"
+                            name="password"
                             onFocus={() =>
                               this.setState({ passwordFocus: true })
                             }
                             onBlur={() =>
                               this.setState({ passwordFocus: false })
                             }
+                            onChange={this.handleInputChange}
                           />
                         </InputGroup>
-                        {/* <FormGroup check className="text-left">
-                          <Label check>
-                            <Input type="checkbox" />
-                            <span className="form-check-sign" />I agree to the{" "}
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
-                              terms and conditions
-                            </a>
-                            .
-                          </Label>
-                        </FormGroup> */}
                       </Form>
                     </CardBody>
                     <CardFooter>
                       <Button
                         className="btn-round"
                         color="info"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={this.handleSubmit}
                         size="lg"
                       >
                         Get Started

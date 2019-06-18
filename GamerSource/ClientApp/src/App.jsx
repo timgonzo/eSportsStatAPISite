@@ -21,7 +21,9 @@ import LandingPage from "./components/LandingPage";
 import Structures from "./components/Structures";
 import ColorNavbar from "./components/Navbars/ColorNavbar.jsx";
 import RegisterPage from "./components/RegisterPage";
-const _logger = logger.extend("App");
+import AccountSettings from "./components/AccountSettings";
+
+const _logger = logger.extend("timgonzo");
 class App extends Component {
   state = { isLocalSetUp: false, storeValue: "", nsKeys: [] };
 
@@ -40,7 +42,7 @@ class App extends Component {
   onSetDebug = () => {
     localStorage.setItem(
       "debug",
-      "timgonzo,timgonzo:App,timgonzo:redux:store,timgonzo:redux:reducers*,timgonzo:redux:actions"
+      "timgonzo*,timgonzo:App,timgonzo:redux:store,timgonzo:redux:reducers*,timgonzo:redux:actions"
     );
 
     window.location.reload();
@@ -51,7 +53,8 @@ class App extends Component {
         <ColorNavbar />
         <Route exact path="/" component={LandingPage} />
         <Route path="/structures" component={Structures} />
-        <Route path="/register" component={RegisterPage} />
+        <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/account/settings" component={AccountSettings} />
       </div>
     );
   }
