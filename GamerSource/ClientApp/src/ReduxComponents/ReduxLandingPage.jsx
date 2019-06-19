@@ -1,12 +1,12 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
 import { Button, Card, CardBody, Container, Row } from "reactstrap";
-import Footer from "./Footer.jsx";
+import ReduxFooter from "./ReduxFooter.jsx";
 
 // import logger from "../logger";
 // const _logger = logger.extend("timgonzo");
 
-class LandingPage extends React.Component {
+class ReduxLandingPage extends React.Component {
   gameSelectRef = React.createRef();
 
   componentDidMount() {
@@ -118,10 +118,10 @@ class LandingPage extends React.Component {
           </Row>
         </div>
         {/* </Container> */}
-        <Footer />
+        <ReduxFooter />
       </React.Fragment>
     );
   }
 }
 
-export default withRouter(LandingPage);
+export default withRouter(ReduxLandingPage);

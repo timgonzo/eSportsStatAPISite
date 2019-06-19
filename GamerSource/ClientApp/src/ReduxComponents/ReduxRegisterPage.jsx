@@ -24,12 +24,12 @@ import {
 } from "reactstrap";
 
 // core components
-import ColorNavbar from "./ColorNavbar.jsx";
-import Footer from "./Footer.jsx";
+import ReduxColorNavbar from "./ReduxColorNavbar.jsx";
+import ReduxFooter from "./ReduxFooter.jsx";
 import logger from "../logger";
 const _logger = logger.extend("timgonzo");
 
-class RegisterPage extends React.Component {
+class ReduxRegisterPage extends React.Component {
   wrapperSelectRef = React.createRef();
 
   state = {
@@ -112,7 +112,7 @@ class RegisterPage extends React.Component {
   render() {
     return (
       <>
-        <ColorNavbar />
+        <ReduxColorNavbar />
         <div className="wrapper" ref={this.wrapperSelectRef}>
           <div className="page-header">
             <div className="page-header-image" />
@@ -259,11 +259,11 @@ class RegisterPage extends React.Component {
               style={{ transform: this.state.squares1to6 }}
             />
           </div>
-          <Footer />
+          <ReduxFooter />
         </div>
       </>
     );
   }
 }
 
-export default RegisterPage;
+export default ReduxRegisterPage;

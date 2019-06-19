@@ -16,7 +16,7 @@ using Microsoft.Extensions.Logging;
 namespace GamerSource.Web.Api.Controllers
 {
     [Route("api/users")]
-    [ApiController]
+    //[ApiController]
     public class UsersApiController : BaseApiController
     {
 
@@ -50,7 +50,7 @@ namespace GamerSource.Web.Api.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public ActionResult<SuccessResponse> Delete(int id)
         {
             try
@@ -67,7 +67,7 @@ namespace GamerSource.Web.Api.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public ActionResult<SuccessResponse> SelectById(int id)
         {
             try

@@ -30,7 +30,7 @@ export const availableRoutes = () => (state, action) => {
       },
       {
         path: "/register",
-        component: "/compoentnets/path/to/Register.jsx"
+        component: "/components/path/to/Register.jsx"
       }
     ];
   }

@@ -27,7 +27,7 @@ namespace GamerSource.Controllers
         }
 
         [HttpPut("{id:int}")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public ActionResult<SuccessResponse> Update(UserProfileUpdateRequest model, int id)
         {
             try

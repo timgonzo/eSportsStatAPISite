@@ -2,23 +2,12 @@ import React from "react";
 import * as PandaScoreServices from "../services/PandaScoreServices.jsx";
 import { withRouter } from "react-router-dom";
 import { Button, Card, CardBody, Row } from "reactstrap";
-import Footer from "./Footer.jsx";
+import ReduxFooter from "./ReduxFooter.jsx";
 
 import logger from "../logger";
 const _logger = logger.extend("timgonzo");
 
-class Structures extends React.Component {
-  state = {
-    pageIndex: 1,
-    pageSize: 50,
-    sort: "name",
-    leagueId: 4205,
-    seriesId: 1732,
-    tournamentId: 2411,
-    playerId: 17513,
-    teamId: 3210
-  };
-
+class ReduxStructures extends React.Component {
   componentDidMount() {
     document.body.classList.add("index-page");
     window.scrollTo(0, 0);
@@ -157,10 +146,10 @@ class Structures extends React.Component {
           </Card>
         </Row>
         {/* </Container> */}
-        <Footer />
+        <ReduxFooter />
       </React.Fragment>
     );
   }
 }
 
-export default withRouter(Structures);
+export default withRouter(ReduxStructures);

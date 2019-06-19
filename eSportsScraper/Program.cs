@@ -5,7 +5,7 @@ using HtmlAgilityPack;
 
 namespace eSportsScraper
 {
-    class qq
+    class Program
     {
         static void Main(string[] args)
         {
@@ -21,23 +21,27 @@ namespace eSportsScraper
                 .Descendants()
                 .Where(sublist => sublist.Attributes["class"] != null && sublist.Attributes["class"].Value.Contains("results-sublist"));
 
-            foreach(var sublist in sublists)
+            foreach (var sublist in sublists)
             {
                 //This might be where I put the event Day/headline
                 var matches = sublist.ChildNodes.Where(match => match.Attributes["class"] != null && match.Attributes["class"].Value.Contains("result-con"));
-                
-                foreach(var match in matches)
+
+                foreach (var match in matches)
                 {
                     var matchResult = new ResultsModel();
 
-                    var team1Node = match.Descendants().Where(node => node.Attributes["class"].Value.Contains("team") && node.ParentNode.Attributes["class"].Value.Contains("line-align team1"));
+                    var team1Node = match.Descendants().Where(node => node.Attributes["class"].Value.Contains("team"));
+                   // && node.ParentNode.Attributes["class"].Value.Contains("line-align team1"));
 
-                    var team1 = team1Node.InnerText;
+                    //var team1 = team1Node.InnerText;
 
                 }
 
 
             }
+        }
+    }
+}
 
 
 //namespace eSportsScraper

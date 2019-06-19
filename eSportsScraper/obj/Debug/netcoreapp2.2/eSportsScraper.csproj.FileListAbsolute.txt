@@ -9,3 +9,14 @@ E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.dll
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.pdb
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.csprojAssemblyReference.cache
+C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.csprojAssemblyReference.cache
+C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.csproj.CoreCompileInputs.cache
+C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.AssemblyInfoInputs.cache
+C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.AssemblyInfo.cs
+C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.dll
+C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.pdb
+C:\My Code\SabioSinglePageApp\eSportsScraper\bin\Debug\netcoreapp2.2\eSportsScraper.deps.json
+C:\My Code\SabioSinglePageApp\eSportsScraper\bin\Debug\netcoreapp2.2\eSportsScraper.runtimeconfig.json
+C:\My Code\SabioSinglePageApp\eSportsScraper\bin\Debug\netcoreapp2.2\eSportsScraper.runtimeconfig.dev.json
+C:\My Code\SabioSinglePageApp\eSportsScraper\bin\Debug\netcoreapp2.2\eSportsScraper.dll
+C:\My Code\SabioSinglePageApp\eSportsScraper\bin\Debug\netcoreapp2.2\eSportsScraper.pdb

@@ -16,14 +16,14 @@
 import React, { Component } from "react";
 import logger from "./logger";
 import { Route, withRouter } from "react-router-dom";
-
 import LandingPage from "./components/LandingPage";
 import Structures from "./components/Structures";
-import ColorNavbar from "./components/Navbars/ColorNavbar.jsx";
+import ColorNavbar from "./components/ColorNavbar.jsx";
 import RegisterPage from "./components/RegisterPage";
 import AccountSettings from "./components/AccountSettings";
 
 const _logger = logger.extend("timgonzo");
+
 class App extends Component {
   state = { isLocalSetUp: false, storeValue: "", nsKeys: [] };
 

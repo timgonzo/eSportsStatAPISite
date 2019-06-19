@@ -9,7 +9,7 @@ const _logger = logger.extend("redux:store");
 
 const reducerArgs = { ...appReducers };
 
-const reducers = combineReducers(reducerArgs);
+const rootReducer = combineReducers(reducerArgs);
 
 const rLogger = createLogger();
 
@@ -17,7 +17,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 //const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
 
 const store = createStore(
-  reducers,
+  rootReducer,
   initialState, // any initial state you want to set
   composeEnhancers(applyMiddleware(rLogger, thunk))
 );
