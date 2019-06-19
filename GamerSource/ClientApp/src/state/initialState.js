@@ -1,26 +1,3 @@
-/*
-
-An example "slice" of state that is normailzed for posts
-
-posts : {
-        byId : {
-            "post1" : {
-                id : "post1",
-                author : "user1",
-                body : "......",
-                comments : ["comment1", "comment2"]
-            },
-            "post2" : {
-                id : "post2",
-                author : "user2",
-                body : "......",
-                comments : ["comment3", "comment4", "comment5"]
-            }
-        },
-        all : ["post1", "post2"]
-    },
-*/
-
 const state = {
   navigation: [],
   availableRoutes: [
@@ -49,66 +26,68 @@ const state = {
     phone: "",
     roles: []
   },
-  leagues: {
-    count: 0,
-    pageIndex: 1,
-    pageSize: 8,
-    items: {
-      all: [],
-      byId: {}
+  structures: {
+    leagues: {
+      count: 0,
+      pageIndex: 1,
+      pageSize: 8,
+      items: {
+        all: [],
+        byId: {}
+      },
+      selectedId: 4205
     },
-    selectedId: 4205
-  },
-  series: {
-    count: 0,
-    pageIndex: 1,
-    pageSize: 8,
-    items: {
-      all: [],
-      byId: {}
+    series: {
+      count: 0,
+      pageIndex: 1,
+      pageSize: 8,
+      items: {
+        all: [],
+        byId: {}
+      },
+      selectedId: 1732
     },
-    selectedId: 1732
-  },
-  tournaments: {
-    count: 0,
-    pageIndex: 1,
-    pageSize: 8,
-    items: {
-      all: [],
-      byId: {}
+    tournaments: {
+      count: 0,
+      pageIndex: 1,
+      pageSize: 8,
+      items: {
+        all: [],
+        byId: {}
+      },
+      selectedId: 2411
     },
-    selectedId: 2411
-  },
-  matches: {
-    count: 0,
-    pageIndex: 1,
-    pageSize: 8,
-    items: {
-      all: [],
-      byId: {}
+    matches: {
+      count: 0,
+      pageIndex: 1,
+      pageSize: 8,
+      items: {
+        all: [],
+        byId: {}
+      },
+      selectedId: 0
+      //Use tournament ID for select
     },
-    selectedId: 0
-    //Use tournament ID for select
-  },
-  teams: {
-    count: 0,
-    pageIndex: 1,
-    pageSize: 8,
-    items: {
-      all: [],
-      byId: {}
+    teams: {
+      count: 0,
+      pageIndex: 1,
+      pageSize: 8,
+      items: {
+        all: [],
+        byId: {}
+      },
+      selectedId: 3210
     },
-    selectedId: 3210
-  },
-  players: {
-    count: 0,
-    pageIndex: 1,
-    pageSize: 8,
-    items: {
-      all: [],
-      byId: {}
-    },
-    selectedId: 17513
+    players: {
+      count: 0,
+      pageIndex: 1,
+      pageSize: 8,
+      items: {
+        all: [],
+        byId: {}
+      },
+      selectedId: 17513
+    }
   }
 };
 

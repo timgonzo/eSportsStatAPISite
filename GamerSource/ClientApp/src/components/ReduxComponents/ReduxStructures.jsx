@@ -1,8 +1,9 @@
 import React from "react";
 import * as PandaScoreServices from "../services/PandaScoreServices.jsx";
-import { withRouter } from "react-router-dom";
 import { Button, Card, CardBody, Row } from "reactstrap";
 import ReduxFooter from "./ReduxFooter.jsx";
+import { connect } from "react-redux";
+import { getCsgoLeaguesPaged } from "../../state/csgo/actions";
 
 import logger from "../logger";
 const _logger = logger.extend("timgonzo");
@@ -26,14 +27,16 @@ class ReduxStructures extends React.Component {
     _logger("There was an error.");
   };
 
-  getCsgoLeagues = () => {
-    PandaScoreServices.getCsgoLeaguesPaged(
-      this.state.pageIndex,
-      this.state.pageSize
-    )
-      .then(this.parseJsonOnGetSuccess)
-      .catch(this.onError);
-  };
+  // getCsgoLeagues = () => {
+  //   PandaScoreServices.getCsgoLeaguesPaged(
+  //     this.state.pageIndex,
+  //     this.state.pageSize
+  //   )
+  //     .then(this.parseJsonOnGetSuccess)
+  //     .catch(this.onError);
+  // };
+
+  //use this.props.getCsgoLeaguesPaged(); instead
 
   getCsgoSeriesByLeague = () => {
     PandaScoreServices.getCsgoSeriesByLeaguePaged(
@@ -152,4 +155,15 @@ class ReduxStructures extends React.Component {
   }
 }
 
-export default withRouter(ReduxStructures);
+const mapStateToProps = state => {
+  return {
+    structures: state.structures
+  };
+};
+
+const mapDispatchToProps = { getCsgoLeaguesPaged };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ReduxStructures);

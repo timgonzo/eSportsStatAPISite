@@ -1,24 +1,24 @@
-import { createStore, applyMiddleware, combineReducers, compose } from "redux"; //combineReducers,
+import { createStore, applyMiddleware, combineReducers, compose } from "redux";
+import { createLogger } from "redux-logger";
 import logger from "../logger";
 import thunk from "redux-thunk";
-import { createLogger } from "redux-logger";
-import * as appReducers from "./reducers";
-import initialState from "./appState";
+import initialState from "./initialState";
+import * as appReducers from "./reducers/index";
+import { routerReducer } from "react-router-redux";
 
 const _logger = logger.extend("redux:store");
 
-const reducerArgs = { ...appReducers };
+const reducerArgs = { ...appReducers, routing: routerReducer };
 
 const rootReducer = combineReducers(reducerArgs);
 
 const rLogger = createLogger();
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-//const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
 
 const store = createStore(
   rootReducer,
-  initialState, // any initial state you want to set
+  initialState,
   composeEnhancers(applyMiddleware(rLogger, thunk))
 );
 

@@ -16,11 +16,11 @@
 import React, { Component } from "react";
 import logger from "./logger";
 import { Route, withRouter } from "react-router-dom";
-import LandingPage from "./components/LandingPage";
-import Structures from "./components/Structures";
-import ColorNavbar from "./components/ColorNavbar.jsx";
-import RegisterPage from "./components/RegisterPage";
-import AccountSettings from "./components/AccountSettings";
+import LandingPage from "./components/ReactComponents/LandingPage";
+import Structures from "./components/ReactComponents/Structures";
+import ColorNavbar from "./components/ReactComponents/ColorNavbar.jsx";
+import RegisterPage from "./components/ReactComponents/RegisterPage";
+import AccountSettings from "./components/ReactComponents/AccountSettings";
 
 const _logger = logger.extend("timgonzo");
 
@@ -52,9 +52,13 @@ class App extends Component {
       <div className="App">
         <ColorNavbar />
         <Route exact path="/" component={LandingPage} />
-        <Route path="/structures" component={Structures} />
-        <Route exact path="/register" component={RegisterPage} />
-        <Route exact path="/account/settings" component={AccountSettings} />
+        <Route path="/react/structures" component={Structures} />
+        <Route exact path="/react/register" component={RegisterPage} />
+        <Route
+          exact
+          path="/react/account/settings"
+          component={AccountSettings}
+        />
       </div>
     );
   }

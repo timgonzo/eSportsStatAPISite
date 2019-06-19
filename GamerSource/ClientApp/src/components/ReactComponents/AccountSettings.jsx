@@ -1,10 +1,27 @@
 import React from "react";
-import * as userServices from "../services/usersServices";
+import * as userServices from "../../services/usersServices";
+// nodejs library that concatenates classes
+//import classnames from "classnames";
+// react plugin that creates an input with badges
+//import TagsInput from "react-tagsinput";
+// react plugin used to create DropdownMenu for selecting items
+//import Select from "react-select";
+// react plugin used to create switch buttons
+//import Switch from "react-bootstrap-switch";
 
+// reactstrap components
 import {
+  // Alert,
   Button,
+  // Label,
   FormGroup,
+  //Form,
   Input,
+  // NavItem,
+  // NavLink,
+  // Nav,
+  // Progress,
+  // Table,
   TabContent,
   TabPane,
   Container,
@@ -12,17 +29,27 @@ import {
   Col
 } from "reactstrap";
 
-import ReduxColorNavbar from "./ReduxColorNavbar.jsx";
-import ReduxFooter from "./ReduxFooter.jsx";
+// core components
+import ColorNavbar from "./ColorNavbar.jsx";
+import Footer from "./Footer.jsx";
 
-import logger from "../logger";
+import logger from "../../logger";
 const _logger = logger.extend("timgonzo");
 
-class ReduxAccountSettings extends React.Component {
+class AccountSettings extends React.Component {
+  state = {
+    profileTabs: 1,
+    id: 4,
+    email: "",
+    firstName: "",
+    lastName: "",
+    phone: ""
+  };
   wrapperSelectRef = React.createRef();
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
+    //this.wrapperSelectRef.scrollTop = 0;
     document.body.classList.add("account-settings");
     userServices.getById(this.state.id).then(this.storeUserDataInState);
   }
@@ -82,7 +109,7 @@ class ReduxAccountSettings extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ReduxColorNavbar />
+        <ColorNavbar />
         <div className="wrapper" ref={this.wrapperSelectRef}>
           <div className="section">
             <Container>
@@ -220,11 +247,11 @@ class ReduxAccountSettings extends React.Component {
               </Row>
             </Container>
           </div>
-          <ReduxFooter />
+          <Footer />
         </div>
       </React.Fragment>
     );
   }
 }
 
-export default ReduxAccountSettings;
+export default AccountSettings;

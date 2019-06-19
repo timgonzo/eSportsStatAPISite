@@ -1,5 +1,5 @@
 import React from "react";
-import * as userServices from "../services/usersServices";
+import * as userServices from "../../services/usersServices";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 // reactstrap components
@@ -26,7 +26,7 @@ import {
 // core components
 import ColorNavbar from "./ColorNavbar.jsx";
 import Footer from "./Footer.jsx";
-import logger from "../logger";
+import logger from "../../logger";
 const _logger = logger.extend("timgonzo");
 
 class RegisterPage extends React.Component {
@@ -133,7 +133,7 @@ class RegisterPage extends React.Component {
                     <CardHeader>
                       <CardImg
                         alt="..."
-                        src={require("../assets/img/square1.png")}
+                        src={require("../../assets/img/square1.png")}
                       />
                       <CardTitle tag="h4">Register</CardTitle>
                     </CardHeader>

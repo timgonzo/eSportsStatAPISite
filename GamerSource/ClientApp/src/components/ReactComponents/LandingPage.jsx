@@ -1,12 +1,12 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
 import { Button, Card, CardBody, Container, Row } from "reactstrap";
-import ReduxFooter from "./ReduxFooter.jsx";
+import Footer from "./Footer.jsx";
 
 // import logger from "../logger";
 // const _logger = logger.extend("timgonzo");
 
-class ReduxLandingPage extends React.Component {
+class LandingPage extends React.Component {
   gameSelectRef = React.createRef();
 
   componentDidMount() {
@@ -55,7 +55,7 @@ class ReduxLandingPage extends React.Component {
                 <Button
                   color="info"
                   className="animation-on-hover flex-fill"
-                  to="/structures"
+                  to="/react/structures"
                   tag={Link}
                 >
                   Counter Strike:
@@ -74,7 +74,7 @@ class ReduxLandingPage extends React.Component {
                 <Button
                   color="info"
                   className="animation-on-hover flex-fill"
-                  to="/structures"
+                  to="/react/structures"
                   tag={Link}
                 >
                   League of Legends
@@ -91,7 +91,7 @@ class ReduxLandingPage extends React.Component {
                 <Button
                   color="info"
                   className="animation-on-hover flex-fill"
-                  to="/structures"
+                  to="/react/structures"
                   tag={Link}
                 >
                   Overwatch
@@ -108,7 +108,7 @@ class ReduxLandingPage extends React.Component {
                 <Button
                   color="info"
                   className="animation-on-hover flex-fill"
-                  to="/structures"
+                  to="/react/structures"
                   tag={Link}
                 >
                   Dota 2
@@ -118,10 +118,10 @@ class ReduxLandingPage extends React.Component {
           </Row>
         </div>
         {/* </Container> */}
-        <ReduxFooter />
+        <Footer />
       </React.Fragment>
     );
   }
 }
 
-export default withRouter(ReduxLandingPage);
+export default withRouter(LandingPage);

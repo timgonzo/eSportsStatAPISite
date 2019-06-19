@@ -1,10 +1,10 @@
 import React from "react";
-import * as PandaScoreServices from "../services/PandaScoreServices.jsx";
+import * as PandaScoreServices from "../../services/PandaScoreServices.jsx";
 import { withRouter } from "react-router-dom";
 import { Button, Card, CardBody, Row } from "reactstrap";
 import Footer from "./Footer.jsx";
 
-import logger from "../logger";
+import logger from "../../logger";
 const _logger = logger.extend("timgonzo");
 
 class Structures extends React.Component {

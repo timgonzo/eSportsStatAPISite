@@ -86,27 +86,27 @@ class ReduxColorNavbar extends React.Component {
                     eSports Sections
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem to="/structures" tag={Link}>
+                    <DropdownItem to="/react/structures" tag={Link}>
                       <i className="tim-icons icon-world" />
                       Leagues
                     </DropdownItem>
-                    <DropdownItem to="/structures" tag={Link}>
+                    <DropdownItem to="/react/structures" tag={Link}>
                       <i className="tim-icons icon-vector" />
                       Series
                     </DropdownItem>
-                    <DropdownItem to="/structures" tag={Link}>
+                    <DropdownItem to="/react/structures" tag={Link}>
                       <i className="tim-icons icon-trophy" />
                       Tournaments
                     </DropdownItem>
-                    <DropdownItem to="/structures" tag={Link}>
+                    <DropdownItem to="/react/structures" tag={Link}>
                       <i className="tim-icons icon-bullet-list-67" />
                       Matches
                     </DropdownItem>
-                    <DropdownItem to="/structures" tag={Link}>
+                    <DropdownItem to="/react/structures" tag={Link}>
                       <i className="tim-icons icon-user-run" />
                       Teams
                     </DropdownItem>
-                    <DropdownItem to="/structures" tag={Link}>
+                    <DropdownItem to="/react/structures" tag={Link}>
                       <i className="tim-icons icon-single-02" />
                       Players
                     </DropdownItem>
@@ -119,11 +119,11 @@ class ReduxColorNavbar extends React.Component {
                   </DropdownToggle>
 
                   <DropdownMenu className="dropdown-with-icons">
-                    <DropdownItem to="/sections#teams" tag={Link}>
+                    <DropdownItem to="/react/" tag={Link}>
                       <i className="tim-icons icon-single-02" />
                       My Profile
                     </DropdownItem>
-                    <DropdownItem to="/account/settings" tag={Link}>
+                    <DropdownItem to="/react/account/settings" tag={Link}>
                       <i className="tim-icons icon-settings-gear-63" />
                       Account Settings
                     </DropdownItem>
@@ -140,7 +140,7 @@ class ReduxColorNavbar extends React.Component {
                   <Button
                     className="nav-link"
                     color="default"
-                    href="/register"
+                    href="/react/register"
                     size="sm"
                   >
                     <p>Sign Up</p>

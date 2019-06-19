@@ -58,3 +58,4 @@ C:\My Code\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSo
 C:\My Code\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.dll
 C:\My Code\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.pdb
 C:\My Code\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csprojAssemblyReference.cache
+E:\Code\Repos\TimGonzo\SabioSinglePageApp\GamerSource.Models\obj\Debug\netcoreapp2.2\GamerSource.Models.csprojAssemblyReference.cache
