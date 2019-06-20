@@ -10,7 +10,7 @@ const _logger = logger.extend("timgonzo");
 class Structures extends React.Component {
   state = {
     pageIndex: 1,
-    pageSize: 50,
+    pageSize: 8,
     sort: "name",
     leagueId: 4205,
     seriesId: 1732,
@@ -29,8 +29,8 @@ class Structures extends React.Component {
   //user product page css as reference
 
   parseJsonOnGetSuccess = response => {
-    var responseObject = JSON.parse(response.item);
-    _logger(responseObject);
+    let responseObject = JSON.parse(response.item);
+    this.setState({ responseObject });
   };
 
   onError = () => {

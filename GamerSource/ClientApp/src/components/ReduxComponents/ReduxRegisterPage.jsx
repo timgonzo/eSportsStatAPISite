@@ -1,5 +1,7 @@
 import React from "react";
-import * as userServices from "../../services/usersServices";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+//import * as userServices from "../../services/usersServices";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 // reactstrap components
@@ -11,7 +13,6 @@ import {
   CardFooter,
   CardImg,
   CardTitle,
-  // Label,
   FormGroup,
   Form,
   Input,
@@ -26,6 +27,8 @@ import {
 // core components
 import ReduxColorNavbar from "./ReduxColorNavbar.jsx";
 import ReduxFooter from "./ReduxFooter.jsx";
+import { addUser } from "../../state/userProfile/actions";
+
 import logger from "../../logger";
 const _logger = logger.extend("timgonzo");
 
@@ -39,7 +42,6 @@ class ReduxRegisterPage extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
-    //this.refs.wrapper.scrollTop = 0;
     window.scrollTo(0, 0);
     document.body.classList.add("register-page");
     document.documentElement.addEventListener("mousemove", this.followCursor, {
@@ -96,17 +98,21 @@ class ReduxRegisterPage extends React.Component {
   };
 
   handleSubmit = () => {
-    const payload = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
-      passwordHash: this.state.password,
-      passwordConfirm: this.state.password
-    };
-    userServices
-      .add(payload)
-      .then(this.onSuccess)
-      .catch(this.onError);
+    debugger;
+    //Need to define payload
+    this.props.addUser();
+
+    //   const payload = {
+    //     firstName: this.state.firstName,
+    //     lastName: this.state.lastName,
+    //     email: this.state.email,
+    //     passwordHash: this.state.password,
+    //     passwordConfirm: this.state.password
+    //   };
+    //   userServices
+    //     .add(payload)
+    //     .then(this.onSuccess)
+    //     .catch(this.onError);
   };
 
   render() {
@@ -266,4 +272,17 @@ class ReduxRegisterPage extends React.Component {
   }
 }
 
-export default ReduxRegisterPage;
+ReduxRegisterPage.propTypes = {
+  addUser: PropTypes.func
+};
+
+const mapStateToProps = state => {
+  return { user: state.user };
+};
+
+const mapDispatchToProps = { addUser };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ReduxRegisterPage);

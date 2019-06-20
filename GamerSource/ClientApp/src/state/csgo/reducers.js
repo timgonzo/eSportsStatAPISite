@@ -11,7 +11,7 @@ let defaultState = {
   selectedId: 4205
 };
 
-export const csgo = (state = defaultState, action) => {
+const csgoReducers = (state = defaultState, action) => {
   switch (action.type) {
     case TYPES.CSGO_RECEIVE_LEAGUES_PAGED: {
       const newLeagues = {
@@ -24,6 +24,8 @@ export const csgo = (state = defaultState, action) => {
       return state;
   }
 };
+
+export default csgoReducers;
 
 //likely written wrong, was naive to Redux functionality
 //when this was written

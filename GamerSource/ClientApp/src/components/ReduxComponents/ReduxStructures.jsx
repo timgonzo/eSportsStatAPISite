@@ -19,8 +19,8 @@ class ReduxStructures extends React.Component {
   //user product page css as reference
 
   parseJsonOnGetSuccess = response => {
-    var responseObject = JSON.parse(response.item);
-    _logger(responseObject);
+    let responseObject = JSON.parse(response.item);
+    this.setState({ responseObject });
   };
 
   onError = () => {
@@ -34,7 +34,7 @@ class ReduxStructures extends React.Component {
   //   )
   //     .then(this.parseJsonOnGetSuccess)
   //     .catch(this.onError);
-  // };
+  // };q
 
   //use this.props.getCsgoLeaguesPaged(); instead
 

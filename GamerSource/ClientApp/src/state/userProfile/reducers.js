@@ -1,15 +1,46 @@
 import { TYPES } from "./actions";
 
-//let initialUserState = {};
+import logger from "../../logger";
+const _logger = logger.extend("redux:reducers:userProfile");
 
-export const userProfile = (state = {}, action) => {
-  let modifiedState = { ...state };
+const initialState = {
+  user: {}
+};
+
+const userProfileReducers = (state = initialState, action) => {
+  _logger(`called with:${action}`);
   switch (action.type) {
-    case TYPES.USER_SET_PROFILE: {
-      modifiedState.user = action.payload;
-      return modifiedState.user;
-    }
+    case TYPES.USER_PROFILE_GET_RESPONSE:
+      return {
+        ...state,
+        user: action.payload
+      };
+
+    case TYPES.USER_PROFILE_UPDATE_RESPONSE:
+      return {
+        ...state,
+        user: action.payload
+      };
+
+    case TYPES.USER_PROFILE_ADD_RESPONSE:
+      return {
+        ...state,
+        user: action.payload
+      };
+
+    case TYPES.USER_PROFILE_DELETE_RESPONSE:
+      return {
+        user: action.payload
+      };
+
     default:
       return state;
   }
 };
+
+export default userProfileReducers;
+
+export const getUserProfile = state => state.user;
+export const updateUserProfile = state => state.user;
+export const addUser = state => state.user;
+export const deleteUser = state => state.user;

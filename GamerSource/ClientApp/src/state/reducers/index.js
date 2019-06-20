@@ -1,8 +1,8 @@
-import { csgo as csgoReducer } from "../csgo/reducers";
-import { userProfile as userProfileReducer } from "../userProfile/reducers";
+import csgoReducers from "../csgo/reducers";
+import userProfileReducers from "../userProfile/reducers";
 
-export const csgo = csgoReducer;
-export const user = userProfileReducer;
+export const userProfileReducer = userProfileReducers;
+export const csgoReducer = csgoReducers;
 
 //Can use multiple reducers from individual components to make higher order reducers just like the ones in csgo/reducers.js
 

@@ -1,11 +1,6 @@
 import React from "react";
 import * as userServices from "../services/usersServices";
 
-const ReduxBasicCard = props =>{
+const ReduxBasicCard = props => {};
 
-    render(){
-        return()
-    }
-};
-
-export default ReduxBasicCard
+export default ReduxBasicCard;
