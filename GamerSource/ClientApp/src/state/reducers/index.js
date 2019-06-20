@@ -1,81 +1,15 @@
-// import { cart as cartReducer } from "../cart/reducers";
-// import { user as userReducer } from "../user/reducers";
-
-// import { people as peopleReducer } from "../people/reducers";
-
-// export const cart = cartReducer;
-// export const user = userReducer;
-// export const people = peopleReducer;
-
-// export const navigation = () => (state = [], action) => {
-//   switch (action.type) {
-//     case "CART_ADD_ITEM":
-//       const newCart = {
-//         ...state,
-//         count: state.count + action.quantity
-//       };
-//       return newCart;
-
-//     default:
-//       return state;
-//   }
-// };
-
-// export const availableRoutes = () => (state, action) => {
-//   if (state === undefined) {
-//     state = [
-//       {
-//         path: "/login",
-//         component: "/compoentnets/path/to/Login.jsx"
-//       },
-//       {
-//         path: "/register",
-//         component: "/compoentnets/path/to/Register.jsx"
-//       }
-//     ];
-//   }
-//   switch (action.type) {
-//     case "CART_ADD_ITEM":
-//       const newCart = {
-//         ...state,
-//         count: state.count + action.quantity
-//       };
-//       return newCart;
-
-//     default:
-//       return state;
-//   }
-// };
-
-// export const ui = () => (state = {}, action) => {
-//   switch (action.type) {
-//     case "CART_ADD_ITEM":
-//       const newCart = {
-//         ...state,
-//         count: state.count + action.quantity
-//       };
-//       return newCart;
-
-//     default:
-//       return state;
-//   }
-// };
-
-// export const notifications = () => (state = {}, action) => {
-//   switch (action.type) {
-//     case "CART_ADD_ITEM":
-//       const newCart = {
-//         ...state,
-//         count: state.count + action.quantity
-//       };
-//       return newCart;
-
-//     default:
-//       return state;
-//   }
-// };
-
 import { csgo as csgoReducer } from "../csgo/reducers";
-export const csgo = csgoReducer;
+import { userProfile as userProfileReducer } from "../userProfile/reducers";
 
-//then use multiple reducers from individual components to make higher order reducers just like the ones in csgo/reducers.js
+export const csgo = csgoReducer;
+export const user = userProfileReducer;
+
+//Can use multiple reducers from individual components to make higher order reducers just like the ones in csgo/reducers.js
+
+//I could do:
+// export const rootReducer = combineReducers(csgo, user);
+//If I used rootReducer from "./reducers/index" in my creatStore function in store.js
+//I would then update the whole store as opposed to a specific property of store
+//defined in this file.
+//*Because I am reducing a specific property, my component-specific reducers need to
+//return that specific property.

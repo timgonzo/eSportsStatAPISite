@@ -22,7 +22,10 @@ import ColorNavbar from "./components/ReactComponents/ColorNavbar.jsx";
 import RegisterPage from "./components/ReactComponents/RegisterPage";
 import AccountSettings from "./components/ReactComponents/AccountSettings";
 
-const _logger = logger.extend("timgonzo");
+import ReduxRegisterPage from "./components/ReduxComponents/ReduxRegisterPage";
+import ReduxAccountSettings from "./components/ReduxComponents/ReduxAccountSettings";
+
+const _logger = logger.extend("timgonzo:App");
 
 class App extends Component {
   state = { isLocalSetUp: false, storeValue: "", nsKeys: [] };
@@ -58,6 +61,13 @@ class App extends Component {
           exact
           path="/react/account/settings"
           component={AccountSettings}
+        />
+        <Route path="/redux/structures" component={Structures} />
+        <Route exact path="/redux/register" component={ReduxRegisterPage} />
+        <Route
+          exact
+          path="/redux/account/settings"
+          component={ReduxAccountSettings}
         />
       </div>
     );

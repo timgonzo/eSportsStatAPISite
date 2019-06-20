@@ -24,3 +24,6 @@ export const csgo = (state = defaultState, action) => {
       return state;
   }
 };
+
+//likely written wrong, was naive to Redux functionality
+//when this was written

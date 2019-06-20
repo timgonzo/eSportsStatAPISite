@@ -23,8 +23,11 @@ export const parseResponse = jQueryString => {
 export const getCsgoLeaguesPaged = (pageIndex, pageSize) => {
   return dispatch => {
     return PandaScoreServices.getCsgoLeaguesPaged(pageIndex, pageSize).then(
-      response =>
-        dispatch(parseResponse(response.item)).catch(onUserProfileActionError)
+      response => dispatch(parseResponse(response.item))
     );
   };
 };
+
+//This was written with a naive understanding of redux actions, not updated
+//not updated because this file is essentially unnecessary but do not use it as reference.
+//*Only use dispatch when you want to update store
