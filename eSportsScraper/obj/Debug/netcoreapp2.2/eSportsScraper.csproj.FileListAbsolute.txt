@@ -1,4 +1,3 @@
-C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.csprojAssemblyReference.cache
 C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.csproj.CoreCompileInputs.cache
 C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.AssemblyInfoInputs.cache
 C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.AssemblyInfo.cs
@@ -20,3 +19,4 @@ E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.AssemblyInfo.cs
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.dll
 E:\Code\Repos\TimGonzo\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.pdb
+C:\My Code\SabioSinglePageApp\eSportsScraper\obj\Debug\netcoreapp2.2\eSportsScraper.csprojAssemblyReference.cache

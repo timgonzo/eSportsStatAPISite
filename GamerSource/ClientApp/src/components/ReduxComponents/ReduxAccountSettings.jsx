@@ -21,7 +21,6 @@ class ReduxAccountSettings extends React.Component {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     document.body.classList.add("account-settings");
-    //userServices.getById(4).then(this.props.storeUserProfile);
     this.props.getUserProfile(4);
   }
   componentWillUnmount() {
@@ -40,16 +39,17 @@ class ReduxAccountSettings extends React.Component {
   scrollToWrapper = () => this.wrapperSelectRef.current.scrollIntoView();
 
   handleUpdateSubmit = () => {
-    //serServices.updateProfile(this.state.payload);
-    debugger;
-    //Need to pass payload
-    this.props.getUserProfile();
+    let payload = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      phone: this.state.phone,
+      id: Number(this.state.id)
+    };
+    this.props.updateUserProfile(payload);
   };
 
   handleDeleteClick = () => {
-    debugger;
-    //Need to pass user ID
-    this.props.deleteUser();
+    this.props.deleteUser(Number(this.state.id));
   };
 
   onSuccess = () => _logger("Success!");
@@ -86,7 +86,7 @@ class ReduxAccountSettings extends React.Component {
                               name="firstName"
                               type="text"
                               defaultValue={
-                                this.props.user
+                                this.props.user.profile
                                   ? this.props.user.profile.firstName
                                   : ""
                               }
@@ -109,7 +109,7 @@ class ReduxAccountSettings extends React.Component {
                               name="lastName"
                               type="text"
                               defaultValue={
-                                this.props.user
+                                this.props.user.profile
                                   ? this.props.user.profile.lastName
                                   : ""
                               }
@@ -151,7 +151,7 @@ class ReduxAccountSettings extends React.Component {
                               type="tel"
                               placeholder="555-555-5555"
                               defaultValue={
-                                this.props.user
+                                this.props.user.profile
                                   ? this.props.user.profile.phone
                                   : ""
                               }
@@ -215,7 +215,7 @@ class ReduxAccountSettings extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return { user: state.user };
+  return { user: state.userProfileReducer.user };
 };
 
 const mapDispatchToProps = { getUserProfile, updateUserProfile, deleteUser };

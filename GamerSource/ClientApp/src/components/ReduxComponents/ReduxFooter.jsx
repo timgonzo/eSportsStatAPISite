@@ -11,7 +11,7 @@ class ReduxFooter extends React.Component {
           <Container>
             <Row>
               <Col md="3">
-                <h1 className="title">GamerSource.TV</h1>
+                <h1 className="title">GamerSource</h1>
               </Col>
             </Row>
           </Container>

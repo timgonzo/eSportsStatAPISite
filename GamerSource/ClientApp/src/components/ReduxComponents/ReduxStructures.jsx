@@ -20,23 +20,22 @@ class ReduxStructures extends React.Component {
 
   parseJsonOnGetSuccess = response => {
     let responseObject = JSON.parse(response.item);
-    this.setState({ responseObject });
+    this.setState({ structures: responseObject });
   };
 
   onError = () => {
     _logger("There was an error.");
   };
 
-  // getCsgoLeagues = () => {
-  //   PandaScoreServices.getCsgoLeaguesPaged(
-  //     this.state.pageIndex,
-  //     this.state.pageSize
-  //   )
-  //     .then(this.parseJsonOnGetSuccess)
-  //     .catch(this.onError);
-  // };q
-
-  //use this.props.getCsgoLeaguesPaged(); instead
+  getCsgoLeagues = () => {
+    PandaScoreServices.getCsgoLeaguesPaged(
+      this.state.pageIndex,
+      this.state.pageSize
+    )
+      .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "leagues" }))
+      .catch(this.onError);
+  };
 
   getCsgoSeriesByLeague = () => {
     PandaScoreServices.getCsgoSeriesByLeaguePaged(
@@ -45,26 +44,31 @@ class ReduxStructures extends React.Component {
       this.state.pageSize
     )
       .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "series" }))
       .catch(this.onError);
   };
 
   getCsgoTournamentBySeries = () => {
+    this.setState({ selectedStructure: "tournaments" });
     PandaScoreServices.GetCsgoTournamentBySeriesPaged(
       this.state.seriesId,
       this.state.pageIndex,
       this.state.pageSize
     )
       .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "tournaments" }))
       .catch(this.onError);
   };
 
   getCsgoMatchByTournament = () => {
+    this.setState({ selectedStructure: "matches" });
     PandaScoreServices.GetCsgoMatchesByTournamentPaged(
       this.state.tournamentId,
       this.state.pageIndex,
       this.state.pageSize
     )
       .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "matches" }))
       .catch(this.onError);
   };
 

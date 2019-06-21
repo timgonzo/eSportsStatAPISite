@@ -25,6 +25,7 @@ export const getUserProfile = userId => {
         return response.item;
       })
       .then(userInfo => dispatch(userProfileGetResponse(userInfo)));
+    //.then(this.props.history.push())
   };
 };
 

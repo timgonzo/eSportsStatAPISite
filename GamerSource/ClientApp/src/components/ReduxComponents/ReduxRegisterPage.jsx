@@ -98,21 +98,15 @@ class ReduxRegisterPage extends React.Component {
   };
 
   handleSubmit = () => {
-    debugger;
-    //Need to define payload
-    this.props.addUser();
-
-    //   const payload = {
-    //     firstName: this.state.firstName,
-    //     lastName: this.state.lastName,
-    //     email: this.state.email,
-    //     passwordHash: this.state.password,
-    //     passwordConfirm: this.state.password
-    //   };
-    //   userServices
-    //     .add(payload)
-    //     .then(this.onSuccess)
-    //     .catch(this.onError);
+    let payload = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      passwordHash: this.state.password,
+      passwordConfirm: this.state.password
+    };
+    this.props.addUser(payload);
+    window.history.back();
   };
 
   render() {

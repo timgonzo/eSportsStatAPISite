@@ -9,6 +9,7 @@ const _logger = logger.extend("timgonzo");
 
 class Structures extends React.Component {
   state = {
+    selectedStructure: "",
     pageIndex: 1,
     pageSize: 8,
     sort: "name",
@@ -30,7 +31,7 @@ class Structures extends React.Component {
 
   parseJsonOnGetSuccess = response => {
     let responseObject = JSON.parse(response.item);
-    this.setState({ responseObject });
+    this.setState({ structures: responseObject });
   };
 
   onError = () => {
@@ -43,6 +44,7 @@ class Structures extends React.Component {
       this.state.pageSize
     )
       .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "leagues" }))
       .catch(this.onError);
   };
 
@@ -53,26 +55,31 @@ class Structures extends React.Component {
       this.state.pageSize
     )
       .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "series" }))
       .catch(this.onError);
   };
 
   getCsgoTournamentBySeries = () => {
+    this.setState({ selectedStructure: "tournaments" });
     PandaScoreServices.GetCsgoTournamentBySeriesPaged(
       this.state.seriesId,
       this.state.pageIndex,
       this.state.pageSize
     )
       .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "tournaments" }))
       .catch(this.onError);
   };
 
   getCsgoMatchByTournament = () => {
+    this.setState({ selectedStructure: "matches" });
     PandaScoreServices.GetCsgoMatchesByTournamentPaged(
       this.state.tournamentId,
       this.state.pageIndex,
       this.state.pageSize
     )
       .then(this.parseJsonOnGetSuccess)
+      .then(this.setState({ selectedStructure: "matches" }))
       .catch(this.onError);
   };
 
@@ -88,8 +95,6 @@ class Structures extends React.Component {
           <div className="squares square6" />
           <div className="squares square7" />
         </div>
-        {/* <Container> */}
-        {/* </Container><Row className="justify-content-center overflow-visible"> */}
         <Row className="justify-content-center">
           <Card className="col-md-2 m-2 p-0">
             <img
@@ -156,7 +161,6 @@ class Structures extends React.Component {
             </CardBody>
           </Card>
         </Row>
-        {/* </Container> */}
         <Footer />
       </React.Fragment>
     );
