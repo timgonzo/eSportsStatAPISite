@@ -1,8 +1,12 @@
 import React from "react";
 import * as PandaScoreServices from "../../services/PandaScoreServices.jsx";
 import { withRouter } from "react-router-dom";
-import { Button, Card, CardBody, Row } from "reactstrap";
-import Footer from "./Footer.jsx";
+import { Button, CardBody, Row, Col } from "reactstrap";
+import Footer from "./Footer";
+import CsgoLeagueCard from "./CsgoLeagueCard";
+import CsgoSeriesCard from "./CsgoSeriesCard";
+import CsgoTournamentCard from "./CsgoTournamentCard";
+import CsgoMatchesCard from "./CsgoMatchesCard";
 
 import logger from "../../logger";
 const _logger = logger.extend("timgonzo");
@@ -17,21 +21,82 @@ class Structures extends React.Component {
     seriesId: 1732,
     tournamentId: 2411,
     playerId: 17513,
-    teamId: 3210
+    teamId: 3210,
+    mappedStructures: []
   };
-
+  q;
   componentDidMount() {
     document.body.classList.add("index-page");
-    window.scrollTo(0, 0);
+    window.scrollTo(this.linksSelectRef);
   }
   componentWillUnmount() {
     document.body.classList.remove("index-page");
   }
-  //user product page css as reference
+
+  linksSelectRef = React.createRef();
+  resultsSelectRef = React.createRef();
+
+  scrollToStructures = () => {
+    this.resultsSelectRef.current.scrollIntoView(true);
+  };
+
+  //Mapping functions below
+  mapStructures = structures => {
+    switch (this.state.selectedStructure) {
+      case "leagues":
+        return (
+          <CsgoLeagueCard
+            key={structures.id}
+            structure={structures}
+            ref={this.resultsSelectRef}
+          />
+        );
+      case "series":
+        return (
+          <CsgoSeriesCard
+            key={structures.id}
+            structure={structures}
+            ref={this.resultsSelectRef}
+          />
+        );
+      case "tournaments":
+        return (
+          <CsgoTournamentCard
+            key={structures.id}
+            structure={structures}
+            ref={this.resultsSelectRef}
+            mapTeams={this.mapTeams}
+          />
+        );
+      case "matches":
+        return (
+          <CsgoMatchesCard
+            key={structures.id}
+            structure={structures}
+            ref={this.resultsSelectRef}
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
+  //AJAX call functions below
+
+  resetSelectedStructure = () => {
+    this.setState({ selectedStructure: "" });
+    this.scrollToStructures();
+  };
 
   parseJsonOnGetSuccess = response => {
-    let responseObject = JSON.parse(response.item);
-    this.setState({ structures: responseObject });
+    let parsedObject = JSON.parse(response.item);
+    this.setState(
+      {
+        structures: parsedObject,
+        mappedStructures: parsedObject.map(this.mapStructures)
+      },
+      this.resetSelectedStructure
+    );
   };
 
   onError = () => {
@@ -60,7 +125,6 @@ class Structures extends React.Component {
   };
 
   getCsgoTournamentBySeries = () => {
-    this.setState({ selectedStructure: "tournaments" });
     PandaScoreServices.GetCsgoTournamentBySeriesPaged(
       this.state.seriesId,
       this.state.pageIndex,
@@ -72,7 +136,6 @@ class Structures extends React.Component {
   };
 
   getCsgoMatchByTournament = () => {
-    this.setState({ selectedStructure: "matches" });
     PandaScoreServices.GetCsgoMatchesByTournamentPaged(
       this.state.tournamentId,
       this.state.pageIndex,
@@ -94,73 +157,103 @@ class Structures extends React.Component {
           <div className="squares square5" />
           <div className="squares square6" />
           <div className="squares square7" />
+
+          <Col>
+            <Row className="col-12 h-50 justify-content-center">
+              <div className="justify-content-center col-3 p-0">
+                <Col>
+                  <CardBody className=" text-center d-flex h-100">
+                    <Button
+                      color="info"
+                      className="animation-on-hover flex-fill"
+                    >
+                      <img
+                        className="card-img-top object-fit"
+                        src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
+                        alt="CSGO League"
+                      />
+                      <Button color="primary" onClick={this.getCsgoLeagues}>
+                        View CSGO Leagues
+                      </Button>
+                    </Button>
+                  </CardBody>
+                </Col>
+              </div>
+              <div className="justify-content-center col-3 p-0">
+                <Col>
+                  <CardBody className=" text-center d-flex h-100">
+                    <Button
+                      color="info"
+                      className="animation-on-hover flex-fill"
+                    >
+                      <img
+                        className="card-img-top object-fit"
+                        src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
+                        alt="CSGO League"
+                      />
+                      <Button
+                        color="primary"
+                        onClick={this.getCsgoSeriesByLeague}
+                      >
+                        View CSGO Series
+                      </Button>
+                    </Button>
+                  </CardBody>
+                </Col>
+              </div>
+              <div className="justify-content-center col-3 p-0">
+                <Col>
+                  <CardBody className=" text-center d-flex h-100">
+                    <Button
+                      color="info"
+                      className="animation-on-hover flex-fill"
+                    >
+                      <img
+                        className="card-img-top object-fit"
+                        src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
+                        alt="CSGO League"
+                      />
+                      <Button
+                        color="primary"
+                        onClick={this.getCsgoTournamentBySeries}
+                      >
+                        View CSGO Tournaments By Series
+                      </Button>
+                    </Button>
+                  </CardBody>
+                </Col>
+              </div>
+              <div className="justify-content-center col-3 p-0">
+                <Col>
+                  <CardBody className=" text-center d-flex h-100">
+                    <Button
+                      color="info"
+                      className="animation-on-hover flex-fill"
+                    >
+                      <img
+                        className="card-img-top object-fit"
+                        src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
+                        alt="CSGO League"
+                      />
+                      <Button
+                        color="primary"
+                        onClick={this.getCsgoMatchByTournament}
+                      >
+                        View CSGO Matches By Tournament
+                      </Button>
+                    </Button>
+                  </CardBody>
+                </Col>
+              </div>
+            </Row>
+          </Col>
         </div>
-        <Row className="justify-content-center">
-          <Card className="col-md-2 m-2 p-0">
-            <img
-              className="card-img-top object-fit"
-              src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
-              alt="CSGO League"
-            />
-            <CardBody className="justify-content-xs-center text-center d-flex">
-              <Button
-                color="primary"
-                className="animation-on-hover flex-fill"
-                onClick={this.getCsgoLeagues}
-              >
-                View CSGO Leagues
-              </Button>
-            </CardBody>
-          </Card>
-          <Card className="col-md-2 m-2 p-0">
-            <img
-              className="card-img-top object-fit"
-              src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
-              alt="CSGO League"
-            />
-            <CardBody className="justify-content-xs-center text-center d-flex">
-              <Button
-                color="primary"
-                className="animation-on-hover flex-fill"
-                onClick={this.getCsgoSeriesByLeague}
-              >
-                View CSGO Series
-              </Button>
-            </CardBody>
-          </Card>
-          <Card className="col-md-2 m-2 p-0">
-            <img
-              className="card-img-top object-fit"
-              src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
-              alt="CSGO League"
-            />
-            <CardBody className="justify-content-xs-center text-center d-flex">
-              <Button
-                color="primary"
-                className="animation-on-hover flex-fill"
-                onClick={this.getCsgoTournamentBySeries}
-              >
-                View CSGO Tournaments By Series
-              </Button>
-            </CardBody>
-          </Card>
-          <Card className="col-md-2 m-2 p-0">
-            <img
-              className="card-img-top object-fit"
-              src="https://pandascore.co/assets/landingpage/icon-flat/CSGO-1c4f0396590eeb5bf5eebffe0e712ade94e4d81555c3b406f4b4e13812afd06c.svg"
-              alt="CSGO League"
-            />
-            <CardBody className="justify-content-xs-center text-center d-flex">
-              <Button
-                color="primary"
-                className="animation-on-hover flex-fill"
-                onClick={this.getCsgoMatchByTournament}
-              >
-                View CSGO Matches By Tournament
-              </Button>
-            </CardBody>
-          </Card>
-        </Row>
+        <Col>
+          <Row className="col-12 h-50">
+            {this.state.mappedStructures}
+            <div ref={this.resultsSelectRef} />
+          </Row>
+        </Col>
         <Footer />
       </React.Fragment>
     );
