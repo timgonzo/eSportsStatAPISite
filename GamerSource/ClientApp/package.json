@@ -19,7 +19,7 @@
     "jquery": "^3.4.1",
     "markerclustererplus": "^2.1.4",
     "modernizr": "^3.7.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.12.0",
     "nouislider": "^13.1.5",
     "popper.js": "^1.15.0",
